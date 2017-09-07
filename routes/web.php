@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');}) -> name('home');
+
+// Daycare creation routes
+Route::get('/daycare', 'DaycareController@create');
+Route::post('/daycare', 'DaycareController@store');
