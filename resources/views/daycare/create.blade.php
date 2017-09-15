@@ -1,6 +1,6 @@
-@extends('master.panel')
+@extends('ldb.dashboard')
 
-@section('content')
+@section('section')
 
 <div class="mx-auto">
 

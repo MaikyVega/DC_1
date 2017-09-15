@@ -1,6 +1,6 @@
-@extends ('master.panel')
+@extends ('ldb.dashboard')
 
-@section('content')
+@section('section')
 
 <div class="col-sm-8 blog-main">
 
