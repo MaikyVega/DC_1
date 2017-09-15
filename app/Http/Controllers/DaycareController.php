@@ -6,7 +6,24 @@ use App\Daycare;
 
 class DaycareController extends Controller
 {
-    
+
+
+  public function index()
+      {
+      // This one is to get all the posts from the oldest to the newest
+      //  $posts = Post::all();
+      //The following will get from the newest to the oldest
+      $daycares = daycare::latest()->get();
+
+        return view('daycare.index', compact('daycares'));
+
+      }
+
+      public function show(daycare $daycare)
+        {
+          $daycares = daycare::all();
+          return view('daycare.show', compact('daycare','daycares'));
+        }
     public function create()
     {
     	return view('daycare.create');
@@ -14,7 +31,7 @@ class DaycareController extends Controller
 
     public function store()
     {
-    	
+
     	// Validation of daycare data
     	$this->validate(request(), [
 

@@ -13,6 +13,10 @@
 
 Route::get('/', function () {return view('welcome');}) -> name('home');
 
+Route::get('/panel', function () {return view('master.panel');});
+
 // Daycare creation routes
-Route::get('/daycare', 'DaycareController@create');
-Route::post('/daycare', 'DaycareController@store');
+route::get('/daycares','DaycareController@index');
+route::get('/daycares/{daycare}', 'DaycareController@show')->where(['daycare' => '[0-9]+']);
+Route::get('/daycares/create', 'DaycareController@create');
+Route::post('/daycares', 'DaycareController@store');

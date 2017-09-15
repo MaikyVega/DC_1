@@ -1,4 +1,4 @@
-@extends('master.layout')
+@extends('master.panel')
 
 @section('content')
 
@@ -11,7 +11,7 @@
   <form method="POST" action="/daycare">
 
     {{ csrf_field() }}
-  
+
   	<!-- DayCare Name -->
   		<div class="form-group">
   	    <input type="text" class="form-control" id="name" name="name" placeholder="Daycare Name" required>
@@ -35,7 +35,7 @@
       	<div class="col">
         	<input type="text" class="form-control" id="city" name="city" placeholder="City" required>
       	</div>
-      
+
       	<div class="col">
         	<select class="form-control" id="state" name="state" required><option>State</option></select>
       	</div>
@@ -55,7 +55,7 @@
       	<div class="col">
         	<input type="text" class="form-control" id="phone1" name ="phone1" placeholder="Phone Number 1" required>
       	</div>
-      
+
       	<div class="col">
         	<input type="text" class="form-control" id="phone2" name="phone2" placeholder="Phone Number 2 (Optional)">
       	</div>
@@ -81,7 +81,7 @@
       	<div class="col">
         	<input type="text" class="form-control" id="admin_firstname" name="admin_firstname" placeholder="First Name" required>
       	</div>
-      
+
       	<div class="col">
         	<input type="text" class="form-control" id="admin_lastname" name="admin_lastname" placeholder="Last Name" required>
       	</div>
@@ -93,7 +93,7 @@
       	<div class="col">
         	<input type="email" class="form-control" id="admin_email" name="admin_email" placeholder="E-Mail" required>
       	</div>
-      
+
       	<div class="col">
         	<input type="text" class="form-control" id="admin_phone" name="admin_phone" placeholder="Phone Number" required>
       	</div>
@@ -114,5 +114,5 @@
   </form>
 
 </div>
-	
+
 @endsection
